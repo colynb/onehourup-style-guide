@@ -3,8 +3,9 @@
     <div class="bg-primary-darker text-white py-24 mb-12">
       <div class="container mx-auto">
         <div>
+          <Logo class="w-48" />
           <h1 class="font-display font-bold text-6xl">
-            OneHourUp Style Guide
+            Style Guide
           </h1>
           <h2 class="font-display text-2xl">
             An overview of OneHourUp's styling and VueJS components. Based on
@@ -248,6 +249,12 @@
             </div>
 
             <div class="flex items-start mb-6">
+              <Button pill>Pill Button</Button>
+              <Button pill outlined>Pill Button</Button>
+              <Button pill outlined danger>Pill Button</Button>
+            </div>
+
+            <div class="flex items-start mb-6">
               <Button disabled>Disabled</Button>
             </div>
             Example classes
@@ -262,10 +269,12 @@
 <script>
 import ColorCard from '~/components/ColorCard'
 import CodeHighlight from '~/components/Highlight'
+import Logo from '~/components/Logo'
 export default {
   components: {
     ColorCard,
-    CodeHighlight
+    CodeHighlight,
+    Logo
   },
   computed: {
     example1() {
@@ -349,6 +358,7 @@ export default {
         <Button disabled>Disabled</Button>
         <Button outlined>Outlined</Button>
         <Button danger outlined>Outlined Danger</Button>
+        <Button pill>Pill Button</Button>
       `
         .replace(/        /g, '')
         .trim()

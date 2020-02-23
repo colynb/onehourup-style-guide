@@ -34,6 +34,9 @@ export default {
     },
     outlined: {
       default: false
+    },
+    pill: {
+      default: false
     }
   },
   computed: {
@@ -103,6 +106,8 @@ export default {
         'px-12': this.size === 'large',
         'text-2xl': this.size === 'large',
         'text-white': this.size === 'large',
+
+        'rounded-full': this.pill !== false
 
 
 
