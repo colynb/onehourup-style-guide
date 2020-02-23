@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+/* purgecss start ignore */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+/* purgecss end ignore */
