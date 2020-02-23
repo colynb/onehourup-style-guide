@@ -1,10 +1,10 @@
-# style-guide
+# OneHourUp Style Guide
 
-> My fine Nuxt.js project
+> An overview of OneHourUp's styling and VueJS components. Based on Tailwind CSS.
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 $ yarn install
 
