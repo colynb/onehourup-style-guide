@@ -19,7 +19,7 @@
     </div>
     <div class="py-24 border-b">
       <div class="container mx-auto">
-        <div class="flex">
+        <div class="md:flex">
           <div class="w-1/3">
             <div class="font-bold font-display text-2xl mb-3">Colors</div>
             <div class="text-gray-600">Primaries and grays</div>
@@ -124,7 +124,7 @@
     </div>
     <div class="py-24 border-b">
       <div class="container mx-auto">
-        <div class="flex">
+        <div class="md:flex">
           <div class="w-1/3">
             <div class="font-bold font-display text-2xl mb-3">Typography</div>
             <div class="text-gray-600">
@@ -155,7 +155,7 @@
     <!--- Alerts -->
     <div class="py-24 border-b">
       <div class="container mx-auto">
-        <div class="flex">
+        <div class="md:flex">
           <div class="w-1/3">
             <div class="font-bold font-display text-2xl mb-3">Alerts</div>
             <div class="text-gray-600">
@@ -199,7 +199,7 @@
     <!-- Badges -->
     <div class="py-24 border-b">
       <div class="container mx-auto">
-        <div class="flex">
+        <div class="md:flex">
           <div class="w-1/3">
             <div class="font-bold font-display text-2xl mb-3">Badges</div>
             <div class="text-gray-600">
@@ -227,7 +227,7 @@
     <!-- Buttons -->
     <div class="py-24 border-b">
       <div class="container mx-auto">
-        <div class="flex">
+        <div class="md:flex">
           <div class="w-1/3">
             <div class="font-bold font-display text-2xl mb-3">Buttons</div>
             <div class="text-gray-600">

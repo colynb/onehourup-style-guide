@@ -1,7 +1,7 @@
 <template>
     <p>
       <button
-        class="m-1 disabled:opacity-50 disabled:cursor-auto button rounded-lg font-display font-bold text-white focus:outline-none"
+        class="whitespace-no-wrap m-1 disabled:opacity-50 disabled:cursor-auto button rounded-lg font-display font-bold text-white focus:outline-none"
         :class="classes"
         :disabled="isDisabled"
       >

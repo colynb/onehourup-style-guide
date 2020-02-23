@@ -1,6 +1,6 @@
 <template>
   <div
-    class="rounded-full py-1 px-3 font-display font-bold text-sm text-white"
+    class="whitespace-no-wrap rounded-full py-1 px-3 font-display font-bold text-sm text-white"
     :class="classes"
   >
     <slot></slot>
