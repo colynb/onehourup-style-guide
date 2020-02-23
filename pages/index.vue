@@ -34,6 +34,9 @@
                 />
               </div>
               <div class="mr-6">
+                <ColorCard color1="primary-light" label="Primary Light" />
+              </div>
+              <div class="mr-6">
                 <ColorCard
                   color1="primary-dark"
                   color2="primary-dark-alt"
@@ -51,24 +54,65 @@
 
             <div class="flex mb-6">
               <div class="mr-6">
-                <ColorCard
-                  color1="success"
-                  color2="success-alt"
-                  label="Success"
-                />
+                <ColorCard color1="success" label="Success" />
               </div>
               <div class="mr-6">
-                <ColorCard
-                  color1="warning"
-                  color2="warning-alt"
-                  label="Warning"
-                />
+                <ColorCard color1="success-light" label="Success Light" />
               </div>
               <div class="mr-6">
-                <ColorCard color1="danger" color2="danger-alt" label="Danger" />
+                <ColorCard color1="success-dark" label="Success Dark" />
               </div>
-              <div>
-                <ColorCard color1="info" color2="info-alt" label="Info" />
+
+              <div class="mr-6">
+                <ColorCard color1="success-darker" label="Success Darker" />
+              </div>
+            </div>
+
+            <div class="flex mb-6">
+              <div class="mr-6">
+                <ColorCard color1="danger" label="Danger" />
+              </div>
+              <div class="mr-6">
+                <ColorCard color1="danger-light" label="Danger Light" />
+              </div>
+              <div class="mr-6">
+                <ColorCard color1="danger-dark" label="Danger Dark" />
+              </div>
+
+              <div class="mr-6">
+                <ColorCard color1="danger-darker" label="Danger Darker" />
+              </div>
+            </div>
+
+            <div class="flex mb-6">
+              <div class="mr-6">
+                <ColorCard color1="warning" label="Warning" />
+              </div>
+              <div class="mr-6">
+                <ColorCard color1="warning-light" label="Warning Light" />
+              </div>
+              <div class="mr-6">
+                <ColorCard color1="warning-dark" label="Warning Dark" />
+              </div>
+
+              <div class="mr-6">
+                <ColorCard color1="warning-darker" label="Warning Darker" />
+              </div>
+            </div>
+
+            <div class="flex mb-6">
+              <div class="mr-6">
+                <ColorCard color1="info" label="Info" />
+              </div>
+              <div class="mr-6">
+                <ColorCard color1="info-light" label="Info Light" />
+              </div>
+              <div class="mr-6">
+                <ColorCard color1="info-dark" label="Info Dark" />
+              </div>
+
+              <div class="mr-6">
+                <ColorCard color1="info-darker" label="Info Darker" />
               </div>
             </div>
 

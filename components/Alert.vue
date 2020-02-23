@@ -25,11 +25,11 @@ export default {
     classes() {
       const classMap = {
         'bg-gray-200': this.type === 'default',
-        'bg-primary-alt': this.type === 'primary',
-        'bg-success-alt': this.type === 'success',
-        'bg-warning-alt': this.type === 'warning',
-        'bg-danger-alt': this.type === 'danger',
-        'bg-info-alt': this.type === 'info',
+        'bg-primary-light': this.type === 'primary',
+        'bg-success-light': this.type === 'success',
+        'bg-warning-light': this.type === 'warning',
+        'bg-danger-light': this.type === 'danger',
+        'bg-info-light': this.type === 'info',
         'text-gray-700': this.type === 'default',
         'text-primary-dark': this.type === 'primary',
         'text-success-dark': this.type === 'success',

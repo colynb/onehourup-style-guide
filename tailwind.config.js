@@ -1,4 +1,13 @@
 const plugin = require('tailwindcss/plugin')
+const Color = require('color')
+
+// const COLOR_PRIMARY = '#41AA8B'
+const COLOR_PRIMARY = '#48BB78'
+const COLOR_SUCCESS = '#21CA21'
+const COLOR_DANGER = '#dc3545'
+const COLOR_WARNING = '#ffc107'
+const COLOR_INFO = '#17a2b8'
+
 /*
  ** TailwindCSS Configuration File
  **
@@ -13,36 +22,65 @@ module.exports = {
       },
       colors: {
         primary: {
-          default: '#009b72',
-          alt: 'rgba(0,155,114,.1)',
-          dark: '#046865',
-          darker: '#192d35',
-          'dark-alt': 'rgba(4,104,101,.1)',
-          'darker-alt': 'rgba(25,45,53,.1)'
+          default: COLOR_PRIMARY,
+          light: Color(COLOR_PRIMARY)
+            .lighten(0.75)
+            .hex(),
+          dark: Color(COLOR_PRIMARY)
+            .darken(0.35)
+            .hex(),
+          darker: Color(COLOR_PRIMARY)
+            .darken(0.65)
+            .desaturate(0.5)
+            .hex()
         },
         success: {
-          default: '#009b2a',
-          alt: 'rgba(0,155,16,.1)',
-          dark: '#009b32',
-          darker: '#026322'
-        },
-        warning: {
-          default: '#ffc107',
-          alt: 'rgba(255,193,7,.1)',
-          dark: '#d09e08',
-          darker: '#926f04'
+          default: COLOR_SUCCESS,
+          light: Color(COLOR_SUCCESS)
+            .lighten(0.75)
+            .hex(),
+          dark: Color(COLOR_SUCCESS)
+            .darken(0.35)
+            .hex(),
+          darker: Color(COLOR_SUCCESS)
+            .darken(0.65)
+            .hex()
         },
         danger: {
-          default: '#dc3545',
-          alt: 'rgba(220,53,69,.1)',
-          dark: '#b62735',
-          darker: '#430f14'
+          default: COLOR_DANGER,
+          light: Color(COLOR_DANGER)
+            .lighten(0.75)
+            .hex(),
+          dark: Color(COLOR_DANGER)
+            .darken(0.35)
+            .hex(),
+          darker: Color(COLOR_DANGER)
+            .darken(0.65)
+            .hex()
+        },
+        warning: {
+          default: COLOR_WARNING,
+          light: Color(COLOR_WARNING)
+            .lighten(0.75)
+            .hex(),
+          dark: Color(COLOR_WARNING)
+            .darken(0.35)
+            .hex(),
+          darker: Color(COLOR_WARNING)
+            .darken(0.65)
+            .hex()
         },
         info: {
-          default: '#17a2b8',
-          alt: 'rgba(23,162,184,.1)',
-          dark: '#17a2b8',
-          darker: '#0f6978'
+          default: COLOR_INFO,
+          light: Color(COLOR_INFO)
+            .lighten(0.75)
+            .hex(),
+          dark: Color(COLOR_INFO)
+            .darken(0.35)
+            .hex(),
+          darker: Color(COLOR_INFO)
+            .darken(0.65)
+            .hex()
         }
       }
     }
