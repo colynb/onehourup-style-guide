@@ -41,6 +41,17 @@
           <div class="flex items-start mb-6">
             <Button disabled>Disabled</Button>
           </div>
+
+          <div class="flex items-start mb-6">
+            <Button link href="/" outlined target="_blank" title="Link title"
+              >Link Button!</Button
+            >
+          </div>
+
+          <div class="flex items-start mb-6">
+            <Button to="/">Nuxt Link!</Button>
+          </div>
+
           <code-highlight>{{ example }}</code-highlight>
         </div>
       </div>
@@ -64,6 +75,12 @@ export default {
         <Button dark outlined>Outlined</Button>
         <Button dark outlined>Outlined Danger</Button>
         <Button pill>Pill Button</Button>
+
+        // Link Button
+        <Button href="/">Link</Button>
+
+        // Nuxt Link Button
+        <Button to="/">Link</Button>
       `
         .replace(/        /g, '')
         .trim()

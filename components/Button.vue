@@ -1,19 +1,30 @@
 <template>
-    <p>
-      <button
-        class="whitespace-no-wrap m-1 disabled:opacity-50 disabled:cursor-auto button rounded-lg font-display font-bold text-white focus:outline-none"
-        :class="classes"
-        :disabled="isDisabled"
-      >
-        <slot></slot>
-      </button>
-    </p>
-  </div>
+  <fragment>
+    <button
+      class="whitespace-no-wrap m-1 disabled:opacity-50 disabled:cursor-auto button rounded-lg font-display font-bold text-white focus:outline-none"
+      :class="classes"
+      :disabled="isDisabled"
+      :is="as"
+      :to="to ? to : undefined"
+      :href="href ? href : undefined"
+      v-bind="$attrs"
+    >
+      <slot></slot>
+    </button>
+  </fragment>
 </template>
 
 <script>
 export default {
   props: {
+    href: {
+      type: String,
+      required: false
+    },
+    to: {
+      type: String,
+      required: false
+    },
     primary: {
       default: true
     },
@@ -43,6 +54,16 @@ export default {
     }
   },
   computed: {
+    as() {
+      if (this.href) {
+        return 'a'
+      }
+      if (this.to) {
+        return 'nuxt-link'
+      }
+
+      return 'button'
+    },
     isDisabled() {
       return this.disabled !== false
     },
@@ -78,25 +99,30 @@ export default {
     },
 
     classes() {
-
       const primaryClasses = {
         'bg-primary': this.isPrimary && !this.isOutlined,
         'text-primary border border-primary': this.isPrimary && this.isOutlined,
-        'hover:bg-primary-light hover:border-transparent': this.isPrimary && this.isOutlined,
-        'hover:bg-primary-dark': !this.isDisabled && this.isPrimary && !this.isOutlined,
+        'hover:bg-primary-light hover:border-transparent':
+          this.isPrimary && this.isOutlined,
+        'hover:bg-primary-dark':
+          !this.isDisabled && this.isPrimary && !this.isOutlined
       }
 
       const dangerClasses = {
         'bg-danger': this.danger !== false && !this.isOutlined,
         'text-danger border border-danger': this.isDanger && this.isOutlined,
-        'hover:bg-danger-light hover:border-transparent': this.isDanger && this.isOutlined,
-        'hover:bg-danger-dark': !this.isDisabled && this.isDanger && !this.isOutlined,
+        'hover:bg-danger-light hover:border-transparent':
+          this.isDanger && this.isOutlined,
+        'hover:bg-danger-dark':
+          !this.isDisabled && this.isDanger && !this.isOutlined
       }
 
       const darkClasses = {
         'bg-gray-700': this.color === 'dark' && !this.isOutlined,
-        'text-gray-800 hover:text-gray-600 border border-gray-800 hover:bg-gray-200 hover:border-transparent': this.color === 'dark' && this.isOutlined,
-        'hover:bg-black': !this.isDisabled && this.color === 'dark' && !this.isOutlined,
+        'text-gray-800 hover:text-gray-600 border border-gray-800 hover:bg-gray-200 hover:border-transparent':
+          this.color === 'dark' && this.isOutlined,
+        'hover:bg-black':
+          !this.isDisabled && this.color === 'dark' && !this.isOutlined
       }
 
       let classes = {
@@ -120,25 +146,21 @@ export default {
         'text-2xl': this.size === 'large',
         'text-white': this.size === 'large',
 
-        'rounded-full': this.pill !== false
+        'rounded-full': this.pill !== false,
 
-
-
-
-
-
+        'opacity-50': this.isDisabled && !this.isOutlined
       }
 
       if (this.color === 'primary') {
-        return {...classes, ...primaryClasses}
+        return { ...classes, ...primaryClasses }
       }
 
       if (this.color === 'danger') {
-        return {...classes, ...dangerClasses}
+        return { ...classes, ...dangerClasses }
       }
 
       if (this.color === 'dark') {
-        return {...classes, ...darkClasses}
+        return { ...classes, ...darkClasses }
       }
 
       return classes
