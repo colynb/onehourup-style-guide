@@ -23,6 +23,16 @@
           </div>
 
           <div class="flex items-start mb-6">
+            <Button dark>Dark</Button>
+            <Button dark outlined>Dark Outlined</Button>
+          </div>
+
+          <div class="flex items-start mb-6">
+            <Button pill small dark>Dark</Button>
+            <Button pill small dark outlined>Dark Outlined</Button>
+          </div>
+
+          <div class="flex items-start mb-6">
             <Button pill>Pill Button</Button>
             <Button pill outlined>Pill Button</Button>
             <Button pill outlined danger>Pill Button</Button>
@@ -51,6 +61,8 @@ export default {
         <Button disabled>Disabled</Button>
         <Button outlined>Outlined</Button>
         <Button danger outlined>Outlined Danger</Button>
+        <Button dark outlined>Outlined</Button>
+        <Button dark outlined>Outlined Danger</Button>
         <Button pill>Pill Button</Button>
       `
         .replace(/        /g, '')

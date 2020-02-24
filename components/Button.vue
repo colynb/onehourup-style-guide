@@ -17,6 +17,9 @@ export default {
     primary: {
       default: true
     },
+    dark: {
+      default: false
+    },
     danger: {
       default: false
     },
@@ -63,6 +66,10 @@ export default {
     },
 
     color() {
+      if (this.dark !== false) {
+        return 'dark'
+      }
+
       if (this.danger !== false) {
         return 'danger'
       }
@@ -84,6 +91,12 @@ export default {
         'text-danger border border-danger': this.isDanger && this.isOutlined,
         'hover:bg-danger-light hover:border-transparent': this.isDanger && this.isOutlined,
         'hover:bg-danger-dark': !this.isDisabled && this.isDanger && !this.isOutlined,
+      }
+
+      const darkClasses = {
+        'bg-gray-700': this.color === 'dark' && !this.isOutlined,
+        'text-gray-800 hover:text-gray-600 border border-gray-800 hover:bg-gray-200 hover:border-transparent': this.color === 'dark' && this.isOutlined,
+        'hover:bg-black': !this.isDisabled && this.color === 'dark' && !this.isOutlined,
       }
 
       let classes = {
@@ -122,6 +135,10 @@ export default {
 
       if (this.color === 'danger') {
         return {...classes, ...dangerClasses}
+      }
+
+      if (this.color === 'dark') {
+        return {...classes, ...darkClasses}
       }
 
       return classes
