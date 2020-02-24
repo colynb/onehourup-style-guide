@@ -91,11 +91,5 @@ module.exports = {
     opacity: ['responsive', 'hover', 'focus', 'disabled'],
     cursor: ['responsive', 'hover', 'focus', 'disabled']
   },
-  plugins: [
-    plugin(function({ addBase, config }) {
-      addBase({
-        code: { color: '#e83e8c' }
-      })
-    })
-  ]
+  plugins: []
 }

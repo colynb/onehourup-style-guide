@@ -28,7 +28,7 @@
           </div>
 
           <div class="flex items-start mb-6">
-            <Button pill small dark>Dark</Button>
+            <Button pill small dark href="/">Dark</Button>
             <Button pill small dark outlined>Dark Outlined</Button>
           </div>
 

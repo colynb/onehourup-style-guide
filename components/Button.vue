@@ -1,7 +1,7 @@
 <template>
   <fragment>
     <button
-      class="whitespace-no-wrap m-1 disabled:opacity-50 disabled:cursor-auto button rounded-lg font-display font-bold text-white focus:outline-none"
+      class="hover:no-underline whitespace-no-wrap m-1 disabled:opacity-50 disabled:cursor-auto button rounded-lg font-display font-bold text-white focus:outline-none"
       :class="classes"
       :disabled="isDisabled"
       :is="as"
@@ -104,7 +104,7 @@ export default {
         'text-primary border border-primary': this.isPrimary && this.isOutlined,
         'hover:bg-primary-light hover:border-transparent':
           this.isPrimary && this.isOutlined,
-        'hover:bg-primary-dark':
+        'hover:bg-primary-dark hover:text-white':
           !this.isDisabled && this.isPrimary && !this.isOutlined
       }
 
@@ -121,7 +121,7 @@ export default {
         'bg-gray-700': this.color === 'dark' && !this.isOutlined,
         'text-gray-800 hover:text-gray-600 border border-gray-800 hover:bg-gray-200 hover:border-transparent':
           this.color === 'dark' && this.isOutlined,
-        'hover:bg-black':
+        'hover:bg-black hover:text-white':
           !this.isDisabled && this.color === 'dark' && !this.isOutlined
       }
 

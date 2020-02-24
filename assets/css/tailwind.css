@@ -16,3 +16,13 @@ blockquote {
   @apply text-primary;
   @apply text-2xl;
 }
+code {
+  color: '#e83e8c';
+}
+a {
+  @apply text-primary;
+}
+a:hover {
+  @apply text-primary-dark;
+  @apply underline;
+}
