@@ -1,6 +1,6 @@
 <template>
   <!--- Alerts -->
-  <div class="py-12 sm:py-24 border-b px-3 sm:px-0">
+  <div class="py-12 sm:py-24 px-3 sm:px-0 border-b">
     <div class="container mx-auto">
       <div class="md:flex">
         <div class="md:w-1/3">

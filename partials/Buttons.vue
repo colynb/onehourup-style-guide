@@ -1,16 +1,16 @@
 <template>
   <!-- Buttons -->
-  <div class="py-12 sm:py-24 border-b">
+  <div class="py-12 sm:py-24 px-3 sm:px-0 border-b">
     <div class="container mx-auto">
-      <div class="md:flex">
-        <div class="w-1/3 pr-12">
+      <div class="sm:flex">
+        <div class="sm:w-1/3 pr-12">
           <div class="font-bold font-display text-2xl mb-3">Buttons</div>
           <div class="text-gray-600">
             Styles for actions in forms, dialogs, and more with support for
             multiple sizes, states, and more.
           </div>
         </div>
-        <div class="w-2/3">
+        <div class="sm:w-2/3">
           <div class="flex items-start mb-6">
             <Button small>Small</Button>
             <Button>Standard</Button>
