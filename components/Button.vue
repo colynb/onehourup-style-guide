@@ -74,14 +74,14 @@ export default {
 
       const primaryClasses = {
         'bg-primary': this.isPrimary && !this.isOutlined,
-        'bg-white text-primary border border-primary': this.isPrimary && this.isOutlined,
+        'text-primary border border-primary': this.isPrimary && this.isOutlined,
         'hover:bg-primary-light hover:border-transparent': this.isPrimary && this.isOutlined,
         'hover:bg-primary-dark': !this.isDisabled && this.isPrimary && !this.isOutlined,
       }
 
       const dangerClasses = {
         'bg-danger': this.danger !== false && !this.isOutlined,
-        'bg-white text-danger border border-danger': this.isDanger && this.isOutlined,
+        'text-danger border border-danger': this.isDanger && this.isOutlined,
         'hover:bg-danger-light hover:border-transparent': this.isDanger && this.isOutlined,
         'hover:bg-danger-dark': !this.isDisabled && this.isDanger && !this.isOutlined,
       }

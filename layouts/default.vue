@@ -1,55 +1,65 @@
 <template>
-  <div>
+  <div class="font-sans text-gray-700 bg-gray-100">
+    <div class="bg-primary-darker text-white mb-1 sm:mb-12">
+      <div class="container mx-auto py-16">
+        <div>
+          <Logo class="w-48" />
+          <h1 class="font-display font-bold text-6xl">
+            Style Guide
+          </h1>
+          <h2 class="font-display text-2xl">
+            An overview of OneHourUp's styling and VueJS components. Based on
+            <a
+              href="https://tailwindcss.com/"
+              class="text-primary hover:underline"
+              >Tailwind CSS</a
+            >.
+          </h2>
+        </div>
+      </div>
+      <div class="container mx-auto">
+        <ul class="flex text-xl">
+          <li class="-mb-px mr-1">
+            <nuxt-link
+              to="/"
+              class="inline-block py-2 px-4 text-primary-light font-semibold hover:text-primary-dark"
+              >Basics</nuxt-link
+            >
+          </li>
+          <li class="mr-1">
+            <nuxt-link
+              to="/components"
+              class="inline-block py-2 px-4 text-primary-light hover:text-primary-dark font-semibold"
+              >Components</nuxt-link
+            >
+          </li>
+          <li class="mr-1">
+            <a
+              class="inline-block py-2 px-4 text-primary-light hover:text-primary-dark font-semibold"
+              href="#"
+              >Pages</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
     <nuxt />
   </div>
 </template>
 
+<script>
+import Logo from '~/components/Logo'
+export default {
+  components: {
+    Logo
+  }
+}
+</script>
+
 <style>
-html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.nuxt-link-exact-active {
+  @apply rounded-t-lg;
+  @apply bg-gray-100;
+  @apply text-gray-800;
 }
 </style>

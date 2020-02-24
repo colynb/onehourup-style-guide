@@ -8,24 +8,34 @@ const COLOR_DANGER = '#dc3545'
 const COLOR_WARNING = '#ffc107'
 const COLOR_INFO = '#17a2b8'
 
-/*
- ** TailwindCSS Configuration File
- **
- ** Docs: https://tailwindcss.com/docs/configuration
- ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
- */
+const rgbval = rgb => `rgba(${rgb.color.join(',')},${rgb.valpha})`
+const lighten = color =>
+  rgbval(
+    Color(color)
+      .lighten(0.5)
+      .fade(0.5)
+      .rgb()
+  )
+
 module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Nunito']
+        display: ['Nunito'],
+        sans: [
+          'Roboto',
+          '"Helvetica Neue"',
+          'system-ui',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"'
+        ]
+        // '"Helvetica Neue", Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"        '
       },
       colors: {
         primary: {
           default: COLOR_PRIMARY,
-          light: Color(COLOR_PRIMARY)
-            .lighten(0.75)
-            .hex(),
+          light: lighten(COLOR_PRIMARY),
           dark: Color(COLOR_PRIMARY)
             .darken(0.35)
             .hex(),
@@ -36,9 +46,7 @@ module.exports = {
         },
         success: {
           default: COLOR_SUCCESS,
-          light: Color(COLOR_SUCCESS)
-            .lighten(0.75)
-            .hex(),
+          light: lighten(COLOR_SUCCESS),
           dark: Color(COLOR_SUCCESS)
             .darken(0.35)
             .hex(),
@@ -48,9 +56,7 @@ module.exports = {
         },
         danger: {
           default: COLOR_DANGER,
-          light: Color(COLOR_DANGER)
-            .lighten(0.75)
-            .hex(),
+          light: lighten(COLOR_DANGER),
           dark: Color(COLOR_DANGER)
             .darken(0.35)
             .hex(),
@@ -60,9 +66,7 @@ module.exports = {
         },
         warning: {
           default: COLOR_WARNING,
-          light: Color(COLOR_WARNING)
-            .lighten(0.75)
-            .hex(),
+          light: lighten(COLOR_WARNING),
           dark: Color(COLOR_WARNING)
             .darken(0.35)
             .hex(),
@@ -72,9 +76,7 @@ module.exports = {
         },
         info: {
           default: COLOR_INFO,
-          light: Color(COLOR_INFO)
-            .lighten(0.75)
-            .hex(),
+          light: lighten(COLOR_INFO),
           dark: Color(COLOR_INFO)
             .darken(0.35)
             .hex(),
