@@ -1,6 +1,6 @@
 <template>
   <div class="font-sans text-gray-700 bg-gray-100">
-    <div class="bg-primary-darker text-white mb-1 sm:mb-12">
+    <div class="bg-primary-darker text-white">
       <div class="container mx-auto py-16">
         <div>
           <Logo class="w-48" />

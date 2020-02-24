@@ -79,3 +79,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.sticky {
+  top: 120px;
+}
+</style>
