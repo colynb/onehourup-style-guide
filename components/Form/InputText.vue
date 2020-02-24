@@ -1,7 +1,7 @@
 <template>
   <input
     type="text"
-    class="appearance-none border border-gray-300 rounded w-full text-gray-700 leading-tight focus:outline-none focus:border-gray-500"
+    class="appearance-none border border-gray-300 w-full text-gray-700 leading-tight focus:outline-none focus:border-gray-500"
     :class="classes"
   />
 </template>
@@ -31,9 +31,9 @@ export default {
     },
     classes() {
       return {
-        'py-2 px-3 text-sm': this.size === 'small',
-        'py-3 px-4 text-lg': this.size === 'standard',
-        'py-4 px-5 text-xl': this.size === 'large'
+        'py-2 px-3 text-sm rounded': this.size === 'small',
+        'py-3 px-4 text-lg rounded-md': this.size === 'standard',
+        'py-4 px-5 text-xl rounded-lg': this.size === 'large'
       }
     }
   }

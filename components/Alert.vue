@@ -1,11 +1,11 @@
 <template>
   <div
-    class="py-4 px-8 rounded font-bold flex justify-between items-center"
+    class="v-alert py-4 px-8 rounded font-bold flex justify-between items-center"
     :class="classes"
-    v-if="visible"
+    v-if="!remove"
   >
     <div><slot></slot></div>
-    <div class="cursor-pointer text-xl" @click="visible = false">&times;</div>
+    <div class="cursor-pointer text-xl" @click="hide">&times;</div>
   </div>
 </template>
 
@@ -18,7 +18,16 @@ export default {
   },
   data() {
     return {
+      remove: false,
       visible: true
+    }
+  },
+  methods: {
+    hide() {
+      this.visible = false
+      setTimeout(() => {
+        this.remove = true
+      }, 250)
     }
   },
   computed: {
@@ -36,6 +45,7 @@ export default {
         'text-warning-dark': this.type === 'warning',
         'text-danger-dark': this.type === 'danger',
         'text-info-dark': this.type === 'info',
+        'opacity-0': !this.visible,
         [this.type]: true
       }
       return classMap
@@ -45,6 +55,9 @@ export default {
 </script>
 
 <style scoped>
+.v-alert {
+  transition: all 250ms ease-in-out;
+}
 .default a {
   @apply text-gray-900;
 }
