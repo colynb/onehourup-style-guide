@@ -87,8 +87,48 @@
                 </div>
               </div>
             </div>
+            <code-highlight>{{ example }}</code-highlight>
+
+            <div class="mb-6 mt-6">
+              <div class="mb-6">
+                <label class="font-bold">Sign Up Form</label>
+              </div>
+              <div>
+                <div class="bg-gray-300 p-12">
+                  <Card class="max-w-sm mx-auto">
+                    <Display size="5" class="mb-6 leading-none"
+                      >Sign Up</Display
+                    >
+                    <input-text
+                      type="text"
+                      label="Email"
+                      class="mb-6"
+                      value="joe@example.com"
+                    />
+                    <input-text
+                      type="password"
+                      label="Password"
+                      value="abc"
+                      error="Password must be at least 8 chars."
+                      class="mb-6"
+                    />
+
+                    <div class="flex items-center justify-between">
+                      <Button type="submit" primary>Next</Button>
+                      <a
+                        class="leading-none text-sm text-gray-600 hover:text-gray-800 hover:underline"
+                        href="#"
+                      >
+                        Already have an account?
+                      </a>
+                    </div>
+                  </Card>
+                </div>
+              </div>
+            </div>
+
+            <code-highlight>{{ example2 }}</code-highlight>
           </div>
-          <code-highlight>{{ example }}</code-highlight>
         </div>
       </div>
     </div>
@@ -114,6 +154,28 @@ export default {
           label="Password"
           error="Passwords must have at least 8 chars."
         />
+      `
+        .replace(/        /g, '')
+        .trim()
+    },
+    example2() {
+      return `
+        <Card class="max-w-sm mx-auto">
+          <Display size="5" class="mb-6 leading-none"
+            >Sign Up</Display
+          >
+          <input-text type="text" label="Email" class="mb-6" />
+          <input-text type="password" label="Password" class="mb-6" />
+          <div class="flex items-center justify-between">
+            <Button type="submit" primary>Next</Button>
+            <a
+              class="leading-none text-sm text-primary hover:text-primary-dark"
+              href="#"
+            >
+              Already have an account?
+            </a>
+          </div>
+        </Card>
       `
         .replace(/        /g, '')
         .trim()
