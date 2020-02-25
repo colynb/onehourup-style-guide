@@ -31,8 +31,13 @@
             <a href="#">an example link</a>.
           </Alert>
 
-          <Alert type="info" class="mb-4">
+          <Alert type="info" class="mb-8">
             A simple Information alert. Here is
+            <a href="#">an example link</a>.
+          </Alert>
+
+          <Alert type="danger" class="mb-4" dismissable>
+            A simple Dismissable alert. Here is
             <a href="#">an example link</a>.
           </Alert>
 

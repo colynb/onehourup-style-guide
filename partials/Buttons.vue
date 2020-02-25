@@ -25,6 +25,8 @@
           <div class="flex items-start mb-6">
             <Button dark>Dark</Button>
             <Button dark outlined>Dark Outlined</Button>
+            <Button link>Link</Button>
+            <Button link disabled>Link (Disabled)</Button>
           </div>
 
           <div class="flex items-start mb-6">
@@ -43,7 +45,7 @@
           </div>
 
           <div class="flex items-start mb-6">
-            <Button link href="/" outlined target="_blank" title="Link title"
+            <Button href="/" outlined target="_blank" title="Link title"
               >Link Button!</Button
             >
           </div>

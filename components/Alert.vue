@@ -5,7 +5,9 @@
     v-if="!remove"
   >
     <div><slot></slot></div>
-    <div class="cursor-pointer text-xl" @click="hide">&times;</div>
+    <div v-if="dismissable" class="cursor-pointer text-xl" @click="hide">
+      &times;
+    </div>
   </div>
 </template>
 
@@ -14,6 +16,10 @@ export default {
   props: {
     type: {
       default: 'default'
+    },
+    dismissable: {
+      type: Boolean,
+      default: false
     }
   },
   data() {

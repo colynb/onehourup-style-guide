@@ -1,7 +1,7 @@
 <template>
   <fragment>
     <button
-      class="hover:no-underline whitespace-no-wrap m-1 disabled:opacity-50 disabled:cursor-auto button rounded-lg font-display font-bold text-white focus:outline-none"
+      class="leading-none whitespace-no-wrap m-1 disabled:opacity-50 disabled:cursor-auto button rounded-lg font-display text-white focus:outline-none"
       :class="classes"
       :disabled="isDisabled"
       :is="as"
@@ -27,6 +27,9 @@ export default {
     },
     primary: {
       default: true
+    },
+    link: {
+      default: false
     },
     dark: {
       default: false
@@ -76,6 +79,9 @@ export default {
     isPrimary() {
       return this.color === 'primary'
     },
+    isLink() {
+      return this.link !== false
+    },
     size() {
       if (this.small !== false) {
         return 'small'
@@ -87,6 +93,10 @@ export default {
     },
 
     color() {
+      if (this.link !== false) {
+        return 'link'
+      }
+
       if (this.dark !== false) {
         return 'dark'
       }
@@ -106,6 +116,12 @@ export default {
           this.isPrimary && this.isOutlined,
         'hover:bg-primary-dark hover:text-white':
           !this.isDisabled && this.isPrimary && !this.isOutlined
+      }
+
+      const linkClasses = {
+        'font-normal bg-transparent text-gray-600 border-none hover:text-primary-dark hover:underline':
+          this.isLink && !this.isDisabled,
+        'hover:no-underline text-gray-600': this.isLink && this.isDisabled
       }
 
       const dangerClasses = {
@@ -129,26 +145,27 @@ export default {
         'bg-transparent': this.isOutlined,
 
         'button-default': this.size === 'medium',
-        'py-2': this.size === 'medium',
-        'px-6': this.size === 'medium',
+        'py-3': this.size === 'medium',
+        'px-8': this.size === 'medium',
         'text-xl': this.size === 'medium',
         'text-white': this.size === 'medium',
 
         'button-small': this.size === 'small',
-        'py-1': this.size === 'small',
-        'px-3': this.size === 'small',
+        'py-2': this.size === 'small',
+        'px-4': this.size === 'small',
         'text-md': this.size === 'small',
         'text-white': this.size === 'small',
 
         'button-large': this.size === 'large',
-        'py-4': this.size === 'large',
+        'py-5': this.size === 'large',
         'px-12': this.size === 'large',
         'text-2xl': this.size === 'large',
         'text-white': this.size === 'large',
 
         'rounded-full': this.pill !== false,
 
-        'opacity-50': this.isDisabled && !this.isOutlined
+        'opacity-50': this.isDisabled && !this.isOutlined,
+        'font-bold hover:no-underline': this.link === false
       }
 
       if (this.color === 'primary') {
@@ -161,6 +178,10 @@ export default {
 
       if (this.color === 'dark') {
         return { ...classes, ...darkClasses }
+      }
+
+      if (this.color === 'link') {
+        return { ...classes, ...linkClasses }
       }
 
       return classes

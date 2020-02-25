@@ -4,7 +4,7 @@
       <div class="sm:flex">
         <div class="sm:w-1/3 pr-12">
           <div class="font-bold font-display text-2xl mb-3">
-            Forms - Text Inputs
+            Forms - Inputs
           </div>
           <div class="text-gray-600">
             Size and state variations for text inputs
@@ -13,6 +13,7 @@
         <div class="sm:w-2/3">
           <div class="mb-6">
             <div class="mb-6"><label class="font-bold">Input Sizes</label></div>
+
             <div class="grid gap-2 grid-cols-3">
               <div>
                 <input-text
@@ -87,6 +88,41 @@
                 </div>
               </div>
             </div>
+
+            <div class="mb-6">
+              <div class="mb-6">
+                <label class="font-bold">Success Input</label>
+              </div>
+              <div class="grid gap-2 grid-cols-3">
+                <div>
+                  <input-text
+                    label="Password"
+                    hint="Min 8 chars"
+                    :success="true"
+                    type="password"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <div class="mb-6">
+                <label class="font-bold">Checkboxes</label>
+              </div>
+              <div class="grid gap-2 grid-cols-3">
+                <div>
+                  <div>
+                    <input-checkbox v-model="formData.checkbox1"
+                      >Option</input-checkbox
+                    >
+                    <input-checkbox v-model="formData.checkbox2"
+                      >Option</input-checkbox
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <code-highlight>{{ example }}</code-highlight>
 
             <div class="mb-6 mt-6">
@@ -137,6 +173,14 @@
 
 <script>
 export default {
+  data() {
+    return {
+      formData: {
+        checkbox1: true,
+        checkbox2: false
+      }
+    }
+  },
   computed: {
     example() {
       return `
