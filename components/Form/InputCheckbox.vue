@@ -9,9 +9,9 @@
       class="hidden"
       @change="handleChange"
     />
-    <div class="checkmark w-6 h-6 bg-white border rounded mr-2">
+    <div class="checkmark w-5 h-5 bg-white border rounded mr-2">
       <svg
-        class="w-4 h-4"
+        class="w-3 h-3"
         viewBox="0 0 512 382"
         version="1.1"
         xmlns="http://www.w3.org/2000/svg"

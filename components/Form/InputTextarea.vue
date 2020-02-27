@@ -1,6 +1,6 @@
 <template>
   <textarea
-    class="appearance-none border border-gray-300 w-full text-gray-700 leading-tight focus:outline-none focus:border-gray-500"
+    class="form-textarea appearance-none border border-gray-300 w-full text-gray-700 leading-tight focus:outline-none focus:border-primary focus:shadow-outline-primary"
     :class="classes"
   />
 </template>

@@ -1,5 +1,5 @@
-const plugin = require('tailwindcss/plugin')
 const Color = require('color')
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 // const COLOR_PRIMARY = '#41AA8B'
 const COLOR_PRIMARY = '#48BB78'
@@ -21,16 +21,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Nunito'],
-        sans: [
-          'Roboto',
-          '"Helvetica Neue"',
-          'system-ui',
-          '-apple-system',
-          'BlinkMacSystemFont',
-          '"Segoe UI"'
-        ]
-        // '"Helvetica Neue", Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"        '
+        display: ['Nunito', ...defaultTheme.fontFamily.sans],
+        sans: ['Roboto', ...defaultTheme.fontFamily.sans]
       },
       colors: {
         primary: {
@@ -91,5 +83,5 @@ module.exports = {
     opacity: ['responsive', 'hover', 'focus', 'disabled'],
     cursor: ['responsive', 'hover', 'focus', 'disabled']
   },
-  plugins: []
+  plugins: [require('@tailwindcss/ui')]
 }

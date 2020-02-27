@@ -107,6 +107,37 @@
 
             <div class="mb-6">
               <div class="mb-6">
+                <label class="font-bold">Input with Prefix and Suffix</label>
+              </div>
+              <div class="grid gap-2 grid-cols-3">
+                <div>
+                  <input-text
+                    prefix="$"
+                    suffix="USD"
+                    label="Price"
+                    value="23.00"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <div class="mb-6">
+                <label class="font-bold">Input with Icon</label>
+              </div>
+              <div class="grid gap-2 grid-cols-3">
+                <div>
+                  <input-text
+                    label="Email"
+                    icon="email"
+                    value="demo@example.com"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <div class="mb-6">
                 <label class="font-bold">Checkboxes</label>
               </div>
               <div class="grid gap-2 grid-cols-3">
