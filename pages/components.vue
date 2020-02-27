@@ -16,6 +16,7 @@
     <Buttons />
     <Forms />
     <Cards />
+    <Collapsibles />
   </div>
 </template>
 
@@ -25,13 +26,15 @@ import Badges from '~/partials/Badges'
 import Buttons from '~/partials/Buttons'
 import Forms from '~/partials/Forms'
 import Cards from '~/partials/Cards'
+import Collapsibles from '~/partials/Collapsibles'
 export default {
   components: {
     Alerts,
     Badges,
     Buttons,
     Forms,
-    Cards
+    Cards,
+    Collapsibles
   },
   computed: {
     example5() {

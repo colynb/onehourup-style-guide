@@ -3,7 +3,7 @@
       <label v-if="label" class="block text-gray-700 text-sm font-bold mb-2">{{label}}</label>
       <input
         :type="type"
-        class="appearance-none border w-full text-gray-700 leading-tight focus:outline-none focus:border-gray-500"
+        class="appearance-none border border-gray-300 w-full text-gray-700 leading-tight focus:outline-none focus:border-gray-500"
         :class="classes"
         v-bind="$attrs"
       />
