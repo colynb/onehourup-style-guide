@@ -22,22 +22,22 @@
           <li class="-mb-px mr-1">
             <nuxt-link
               to="/"
-              class="inline-block py-2 px-4 text-primary-light font-semibold hover:text-primary-dark"
+              class="inline-block py-2 px-4 text-primary-light font-semibold hover:text-primary-dark hover:no-underline"
               >Basics</nuxt-link
             >
           </li>
           <li class="mr-1">
             <nuxt-link
               to="/components"
-              class="inline-block py-2 px-4 text-primary-light hover:text-primary-dark font-semibold"
+              class="inline-block py-2 px-4 text-primary-light hover:text-primary-dark hover:no-underline font-semibold"
               >Components</nuxt-link
             >
           </li>
           <li class="mr-1">
-            <a
-              class="inline-block py-2 px-4 text-primary-light hover:text-primary-dark font-semibold"
-              href="#"
-              >Pages</a
+            <nuxt-link
+              to="/pages"
+              class="inline-block py-2 px-4 text-primary-light hover:text-primary-dark hover:no-underline font-semibold"
+              >Pages</nuxt-link
             >
           </li>
         </ul>
@@ -57,6 +57,9 @@ export default {
 </script>
 
 <style>
+html {
+  @apply bg-gray-100;
+}
 .nuxt-link-exact-active {
   @apply rounded-t-lg;
   @apply bg-gray-100;
