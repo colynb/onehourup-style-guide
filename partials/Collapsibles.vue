@@ -4,11 +4,7 @@
     subtitle="Show/hide information by clicking on a title."
   >
     <div>
-      <Collapsible
-        class="mb-2"
-        :opened="opened === 0"
-        v-on:on-open="opened = 0"
-      >
+      <Collapsible class="mb-2">
         <template v-slot:header>
           Pariatur ullamco non ullamco reprehenderit minim esse aliqua duis et.
         </template>
@@ -23,11 +19,7 @@
           Duis tincidunt aliquam mi sed sagittis.
         </div>
       </Collapsible>
-      <Collapsible
-        class="mb-2"
-        :opened="opened === 1"
-        v-on:on-open="opened = 1"
-      >
+      <Collapsible class="mb-2">
         <template v-slot:header>
           Cupidatat ullamco exercitation elit ut Lorem officia voluptate
           consequat eu dolor magna pariatur cillum.
@@ -39,11 +31,7 @@
           tempor irure in commodo dolore.
         </div>
       </Collapsible>
-      <Collapsible
-        class="mb-2"
-        :opened="opened === 2"
-        v-on:on-open="opened = 2"
-      >
+      <Collapsible class="mb-2">
         <template v-slot:header>
           In minim eiusmod laborum dolor magna non non cupidatat elit aute.
         </template>
@@ -65,11 +53,6 @@ export default {
   components: {
     Section,
     Collapsible
-  },
-  data() {
-    return {
-      opened: null
-    }
   }
 }
 </script>

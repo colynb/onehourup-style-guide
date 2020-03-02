@@ -1,7 +1,7 @@
 <template>
   <div
-    class="border-gray-300 rounded-lg hover:shadow"
-    :class="{ shadow: opened, 'bg-white': opened }"
+    class="border-gray-300 rounded-lg hover:shadow bg-white"
+    :class="{ shadow: value }"
   >
     <div class="text-lg leading-7">
       <button
@@ -10,14 +10,14 @@
       >
         <div
           class="font-display font-medium font-bold"
-          :class="{ 'text-primary': opened }"
+          :class="{ 'text-primary': value }"
         >
           <slot name="header"></slot>
         </div>
         <span class="ml-6 h-7 flex items-center">
           <svg
             class="h-6 w-6 transform"
-            :class="{ '-rotate-180': opened }"
+            :class="{ '-rotate-180': value }"
             stroke="currentColor"
             fill="none"
             viewBox="0 0 24 24"
@@ -32,7 +32,7 @@
         </span>
       </button>
     </div>
-    <div class="mt-2 p-4 pt-0" :class="{ hidden: !opened }">
+    <div class="mt-2 p-4 pt-0" :class="{ hidden: !value }">
       <p class="text-base leading-6 text-gray-500">
         <slot></slot>
       </p>
@@ -48,15 +48,15 @@ export default {
   },
   methods: {
     toggle() {
-      this.opened = !this.opened
-      if (this.opened) {
-        this.$emit('on-open', this.opened)
+      this.value = !this.value
+      if (this.value) {
+        this.$emit('opened', this.value)
       }
     }
   },
   data() {
     return {
-      open: this.opened
+      value: this.opened
     }
   }
 }
