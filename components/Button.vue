@@ -1,17 +1,15 @@
 <template>
-  <fragment>
-    <button
-      class="leading-none whitespace-no-wrap m-1 disabled:opacity-50 disabled:cursor-auto button rounded-lg font-display text-white focus:outline-none"
-      :class="classes"
-      :disabled="isDisabled"
-      :is="as"
-      :to="to ? to : undefined"
-      :href="href ? href : undefined"
-      v-bind="$attrs"
-    >
-      <slot></slot>
-    </button>
-  </fragment>
+  <button
+    class="leading-none whitespace-no-wrap m-1 disabled:opacity-50 disabled:cursor-auto button rounded-lg font-display text-white focus:outline-none"
+    :class="classes"
+    :disabled="isDisabled"
+    :is="as"
+    :to="to ? to : undefined"
+    :href="href ? href : undefined"
+    v-bind="$attrs"
+  >
+    <slot></slot>
+  </button>
 </template>
 
 <script>

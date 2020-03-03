@@ -9,8 +9,15 @@
           </div>
         </div>
         <div class="sm:w-2/3">
-          <h3 class="font-display text-lg font-bold">Account</h3>
-          <nuxt-link to="/account/settings">Account Settings</nuxt-link>
+          <div>
+            <h3 class="font-display text-lg font-bold mb-6">Account</h3>
+            <div class="leading-10">
+              <nuxt-link to="/account/profile">Account Profile</nuxt-link>
+            </div>
+            <div class="leading-10">
+              <nuxt-link to="/auth/login">Login</nuxt-link>
+            </div>
+          </div>
         </div>
       </div>
     </div>

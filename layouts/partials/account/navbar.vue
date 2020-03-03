@@ -9,7 +9,7 @@
           <div class="hidden sm:-my-px sm:ml-6 sm:flex">
             <nuxt-link
               to="/"
-              class="inline-flex items-center px-1 pt-1 border-b-2 border-primary text-sm font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out"
+              class="inline-flex items-center px-1 pt-1 border-b-2 border-primary text-lg hover:no-underline font-medium leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out"
             >
               Style Guide
             </nuxt-link>
@@ -47,7 +47,9 @@
               </button>
             </div>
             <div
-              class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg hidden"
+              v-if="open"
+              transition="expand"
+              class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg"
             >
               <div class="py-1 rounded-md bg-white shadow-xs">
                 <a
@@ -107,21 +109,6 @@
           to="/"
           class="block pl-3 pr-4 py-2 border-l-4 border-primary font-medium text-primary bg-primary-light focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out"
           >Style Guide</nuxt-link
-        >
-        <a
-          href="#"
-          class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
-          >Team</a
-        >
-        <a
-          href="#"
-          class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
-          >Projects</a
-        >
-        <a
-          href="#"
-          class="mt-1 block pl-3 pr-4 py-2 border-l-4 border-transparent font-medium text-gray-600 hover:text-gray-800 hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:bg-gray-50 focus:border-gray-300 transition duration-150 ease-in-out"
-          >Calendar</a
         >
       </div>
       <div class="pt-4 pb-3 border-t border-gray-200">
